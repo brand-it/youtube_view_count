@@ -1,24 +1,19 @@
-# README
+# Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Just have to execute the bin/setup script
 
-Things you may want to cover:
+```shell
+$ bin/setup
+```
 
-* Ruby version
+After that place the YOUTUBE_API_KEY into the .env file or export the api key to the bash console your going to be starting the rails server on.
 
-* System dependencies
+```shell
+export YOUTUBE_API_KEY='THEONEKEY'
+```
 
-* Configuration
+after that should start and be all happy
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```shell
+bundle exec puma
+```

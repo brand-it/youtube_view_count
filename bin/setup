@@ -22,10 +22,14 @@ chdir APP_ROOT do
 
   # Install JavaScript dependencies if using Yarn
   # system('bin/yarn')
+  system('touch .env')
+  puts "Placed YOUTUBE_API_KEY into the .env file. That or add it the console"
 
   puts "\n== Removing old logs and tempfiles =="
   system! 'bin/rails log:clear tmp:clear'
 
   puts "\n== Restarting application server =="
   system! 'bin/rails restart'
+
+
 end
