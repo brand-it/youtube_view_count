@@ -23,6 +23,7 @@ chdir APP_ROOT do
   # Install JavaScript dependencies if using Yarn
   # system('bin/yarn')
   system('touch .env')
+  system('echo "YOUTUBE_API_KEY = \'REDACTED\'" > .env')
   puts "Placed YOUTUBE_API_KEY into the .env file. That or add it the console"
 
   puts "\n== Removing old logs and tempfiles =="
