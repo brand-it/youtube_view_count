@@ -1,0 +1,11 @@
+#video-views-center
+  section.jumbotron.text-center
+    .container
+      h1.jumbotron-heading
+        p = fa_icon 'youtube 5x'
+        p Find Out Total Views
+      p.lead
+        = form_for :video_view, url:  do |f|
+          .form-group
+            = f.text_field :video_id, class: 'form-control text-center form-control-lg', placeholder: 'Video ID'
+          = f.button 'Get View Count', class: 'btn btn-light'
