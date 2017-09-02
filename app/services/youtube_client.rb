@@ -1,10 +1,14 @@
 # frozen_string_literal: true
 
-class YoutubeClient
-  attr_accessor :uri
-  def initialize
-    self.uri = 'https://www.googleapis.com/youtube/v3'
-    self.api_key = ENV['YOUTUBE_API_KEY']
-    raise 'YOUTUBE_API_KEY enviorment varable is missing. Won\'t be able to get to youtube' if api_key.nil?
+require 'youtube_client/config'
+module YoutubeClient
+  def self.configuration
+    @configuration ||= YoutubeClient::Config.new
+  end
+
+  def self.configure
+    yield configuration
+    configuration
   end
 end
+require 'youtube_client/base'
