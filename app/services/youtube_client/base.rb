@@ -25,6 +25,7 @@ module YoutubeClient
 
     def self.get(path, options = {})
       setup
+      options[:query][:key] = YoutubeClient.configuration.api_key
       results = super(path, options)
       verify_response(results)
       objectize(results)

@@ -4,6 +4,6 @@ class VideoViewsController < ApplicationController
   def new; end
 
   def create
-    @total_views = '123456'
+    render json: YoutubeClient::Video.find(params[:video_view][:video_id])
   end
 end
