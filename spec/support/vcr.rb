@@ -2,7 +2,7 @@
 
 require 'vcr'
 
-ENV['YOUTUBE_API_KEY'] ||= 'because it is required for testing'
+
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/vcr'
   c.hook_into :webmock
