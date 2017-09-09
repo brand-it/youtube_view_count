@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/newdark/youtube_view_count.svg?style=svg)](https://circleci.com/gh/newdark/youtube_view_count)
+
 # Setup
 
 Just have to execute the bin/setup script
